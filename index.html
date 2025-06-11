@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Beatles</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #fffaf0;
+      color: #222;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 3rem;
+      background-color: transparent;
+      flex-wrap: wrap;
+    }
+
+    .nav-left {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #f57c00;
+    }
+
+    .nav-center {
+      display: flex;
+      gap: 2rem;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #f57c00;
+    }
+
+    .nav-right button {
+      border: 2px solid #f57c00;
+      padding: 0.5rem 1.5rem;
+      border-radius: 999px;
+      background-color: transparent;
+      color: #f57c00;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .hero {
+      padding: 3rem;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .hero h1 {
+      font-size: 8rem;
+      font-weight: 900;
+      margin: 0;
+      color: #f57c00;
+      letter-spacing: -0.2rem;
+    }
+
+    .hero p {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #f57c00;
+      margin-top: 2rem;
+      line-height: 1.5;
+    }
+
+    .photo-boxes {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      margin: 4rem auto;
+      max-width: 900px;
+    }
+
+    .photo-boxes img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu {
+      background-color: #f57c00;
+      color: #fffaf0;
+      padding: 4rem 2rem;
+      border-radius: 2rem 2rem 0 0;
+    }
+
+    .menu h2 {
+      font-size: 2rem;
+      margin-top: 2rem;
+    }
+
+    .menu a {
+      display: block;
+      color: white;
+      font-weight: 700;
+      margin: 1rem 0;
+      text-decoration: underline;
+      font-size: 1.5rem;
+    }
+
+    .apropos {
+      background-color: #ffe58f;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 4rem 2rem;
+      gap: 2rem;
+    }
+
+    .apropos-text {
+      flex: 1 1 300px;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #222;
+    }
+
+    .apropos-text button {
+      margin-top: 2rem;
+      padding: 0.7rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 999px;
+      border: 2px solid #222;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    .apropos-img {
+      flex: 1 1 300px;
+      max-width: 300px;
+    }
+
+    .apropos-img img {
+      width: 100%;
+      border-radius: 2rem;
+    }
+
+    .testimonials {
+      background-color: #b2d6f2;
+      color: #222;
+      padding: 4rem 2rem;
+      border-radius: 2rem;
+    }
+
+    .testimonials h2 {
+      font-size: 3rem;
+      font-weight: 900;
+      margin-bottom: 2rem;
+    }
+
+    .testimonial-text {
+      font-size: 1.5rem;
+      font-weight: 600;
+      max-width: 800px;
+    }
+
+    .favorite-song {
+      margin: 4rem auto;
+      text-align: center;
+      font-family: 'Kumbh Sans', sans-serif;
+      font-size: 1.5rem;
+    }
+
+    .contact {
+      background-color: #f57c00;
+      color: #fff6e7;
+      padding: 4rem 2rem;
+      border-radius: 2rem 2rem 0 0;
+    }
+
+    .contact h2 {
+      font-size: 3rem;
+      font-weight: 900;
+    }
+
+    .contact p {
+      font-size: 1.5rem;
+      margin: 1rem 0 3rem;
+    }
+
+    form {
+      max-width: 700px;
+    }
+
+    label {
+      font-size: 1.5rem;
+      font-weight: 700;
+      display: block;
+      margin-top: 2rem;
+    }
+
+    label span {
+      font-weight: 900;
+      color: #3b1f1b;
+    }
+
+    input, textarea {
+      width: 100%;
+      border: none;
+      border-radius: 3rem;
+      padding: 1.2rem;
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+      box-sizing: border-box;
+    }
+
+    input {
+      background-color: #ffe0cc;
+    }
+
+    textarea {
+      height: 150px;
+      background-color: white;
+      border-radius: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 4rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+      }
+
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .apropos {
+        flex-direction: column;
+      }
+
+      .apropos-img {
+        max-width: 100%;
+      }
+
+      .photo-boxes {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="nav-left">The Beatles</div>
+    <div class="nav-center">
+      <a href="#services">Albums</a>
+      <a href="#travail">Biographie</a>
+      <a href="#apropos">Témoignage</a>
+    </div>
+    <div class="nav-right">
+      <button onclick="window.location.href='https://www.thebeatles.com'">Site Officiel</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>The Beatles</h1>
+    <p>
+      Icônes indémodables du rock britannique, les Beatles ont révolutionné la musique et la culture populaire des années 60. Le groupe composé de John Lennon, Paul McCartney, George Harrison et Ringo Starr a marqué plusieurs générations par son inventivité musicale et son style inimitable.
+    </p>
+  </section>
+
+  <div class="photo-boxes">
+    <img src="https://fr.shopping.rakuten.com/photo/1945297784_ML_NOPAD.jpg">
+    <img src="https://people.com/thmb/GEMT5hOHPAnXPDfA3Bh1U2NuDJE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(999x0:1001x2)/the-beetles-1-1a971bd703a849268568fcf20bee9fe1.jpg">
+  </div>
+
+  <section class="menu" id="services">
+    <h2>Albums</h2>
+    <a href="#">Abbey Road</a>
+    <a href="#">Sgt. Pepper's Lonely Hearts Club Band</a>
+    <a href="#">Revolver</a>
+    <a href="#">The White Album</a>
+  </section>
+
+  <section class="apropos" id="apropos">
+    <div class="apropos-text">
+      Formés à Liverpool en 1960, les Beatles ont connu un succès mondial dès leurs débuts. Leur discographie riche, leurs paroles engagées et leur constante évolution artistique en ont fait un groupe culte. Ils sont considérés comme l’un des groupes les plus influents de l’histoire de la musique.
+      <br>
+      <button onclick="window.location.href='https://www.thebeatles.com'">Voir le site officiel</button>
+    </div>
+    <div class="apropos-img">
+      <img src="https://static.posters.cz/image/750/198951.jpg" alt="The Beatles">
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>Témoignages</h2>
+    <p class="testimonial-text">« Écouter les Beatles, c’est voyager à travers le temps et l’émotion. Chaque album raconte une histoire différente, toujours avec une touche de magie. »</p>
+  </section>
+
+  <section class="favorite-song">
+    <p>Ma chanson préférée des Beatles : <a href="https://www.youtube.com/watch?v=HrxX9TBj2zY" target="_blank"><u>Strawberry Fields Forever</u></a></p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Nous contacter</h2>
+    <p>N'hésitez pas à me contacter pour toute information supplémentaire concernant le groupe, les événements ou leur héritage musical.</p>
+    <form>
+      <label for="email">E-mail <span>(obligatoire)</span></label>
+      <input type="email" id="email" required />
+
+      <label for="message">Message <span>(obligatoire)</span></label>
+      <textarea id="message" required></textarea>
+    </form>
+  </section>
+</body>
+</html>
